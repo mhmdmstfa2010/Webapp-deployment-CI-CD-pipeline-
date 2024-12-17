@@ -1,0 +1,47 @@
+---
+- name: Setup Docker and Run Application
+  hosts: targets
+  become: yes
+  tasks:
+
+    - name: Install prerequisites
+      apt:
+        name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']
+        state: present
+        update_cache: yes
+
+    - name: Add Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker repository
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+        state: present
+
+    - name: Install Docker Engine
+      apt:
+        name: docker-ce
+        state: present
+        update_cache: yes
+
+    - name: Ensure Docker service is running
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Pull Docker image from Docker Hub
+      docker_image:
+        name: mohmed710/orange:latest
+        source: pull
+
+    - name: Run Docker container
+      docker_container:
+        name: final_project_app
+        image: mohmed710/orange:latest
+        state: started
+        ports:
+          - "8080:8080"  # Adjust port mapping as needed
+
