@@ -1,30 +1,24 @@
 ---
-- name: Setup Docker and Run Application
+- name: Setup Docker on CentOS
   hosts: targets
-  become: yes
+  become: true  # Elevate privileges to run tasks as root
   tasks:
 
-    - name: Install prerequisites
-      apt:
-        name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']
-        state: present
-        update_cache: yes
-
-    - name: Add Docker GPG key
-      apt_key:
-        url: https://download.docker.com/linux/ubuntu/gpg
+    - name: Install required packages for Docker
+      yum:
+        name:
+          - yum-utils
+          - device-mapper-persistent-data
+          - lvm2
         state: present
 
-    - name: Add Docker repository
-      apt_repository:
-        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-        state: present
+    - name: Set up Docker repository
+      shell: curl -fsSL https://get.docker.com | sh
 
     - name: Install Docker Engine
-      apt:
+      yum:
         name: docker-ce
         state: present
-        update_cache: yes
 
     - name: Ensure Docker service is running
       systemd:
@@ -34,14 +28,17 @@
 
     - name: Pull Docker image from Docker Hub
       docker_image:
-        name: mohmed710/orange:latest
+        name: mohamed710/orange:latest
         source: pull
+      register: docker_image_result
+      failed_when: false  # Allow the playbook to continue even if the pull fails
 
     - name: Run Docker container
       docker_container:
         name: final_project_app
-        image: mohmed710/orange:latest
+        image: mohamed710/orange:latest
         state: started
         ports:
-          - "8080:8080"  # Adjust port mapping as needed
+          - "8080:5000"
+      when: docker_image_result.failed == false or docker_image_result.changed == false
 
