@@ -184,27 +184,6 @@ Verify each stage completes successfully by reviewing the Jenkins console output
 - Confirm that the application is running on both target machines by accessing the exposed port (e.g., `http://<machine_ip>:8080`).
 
 ---
-
-## Pipeline Iterations
-The pipeline execution journey involved 70 iterations of failure before achieving success. This process emphasized the importance of debugging, incremental improvements, and persistence in CI/CD pipelines.
-
-## Visuals
-### 1. Jenkins Pipeline Overview
-![Jenkins Pipeline Overview](path/to/jenkins_pipeline_overview.png)
-
-### 2. Docker Containers Running
-![Docker Containers Running](path/to/docker_containers_running.png)
-
-### 3. Application Accessible on Target Machines
-![Application Running](path/to/application_running.png)
-
-### 6. Run the Pipeline
-- Trigger the Jenkins pipeline manually or schedule it based on your requirement.
-- Verify each stage completes successfully by reviewing the Jenkins console output.
-- Confirm that the application is running on both target machines by accessing the exposed port (e.g., `http://<machine_ip>:8080`).
-
----
-
 ## Pipeline Iterations
 The pipeline execution journey involved 70 iterations of failure before achieving success. This process emphasized the importance of debugging, incremental improvements, and persistence in CI/CD pipelines.
 
