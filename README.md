@@ -189,7 +189,7 @@ The pipeline execution journey involved 70 iterations of failure before achievin
 
 ## Visuals
 ### 1. Jenkins Pipeline Overview
-![Jenkins Pipeline Overview](path/to/jenkins_pipeline_overview.png)
+![Jenkins Pipeline Overview](https://github.com/mhmdmstfa2010/ODC-final-project/blob/master/imags/Screenshot%202024-12-20%20211152.png)
 
 
 ### 2. Application Accessible on Target Machines
