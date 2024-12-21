@@ -193,7 +193,7 @@ The pipeline execution journey involved 70 iterations of failure before achievin
 
 
 ### 2. Application Accessible on Target Machines
-![Application Running](path/to/application_running.png)
+![Application Running](https://github.com/mhmdmstfa2010/ODC-final-project/blob/master/imags/Screenshot%202024-12-21%20133856.png)
 
 ---
 
