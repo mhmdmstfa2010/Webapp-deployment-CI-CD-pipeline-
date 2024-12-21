@@ -174,7 +174,7 @@ Trigger the Jenkins pipeline manually or schedule it based on your requirement.
 
 Verify each stage completes successfully by reviewing the Jenkins console output.
 
-Confirm that the application is running on both target machines by accessing the exposed port (e.g., http://<machine_ip>:5000).
+Confirm that the application is running on both target machines by accessing the exposed port (e.g., http://<machine_ip>:8080).
 ---
 
 ## Conclusion
