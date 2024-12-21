@@ -1,7 +1,7 @@
 # Build and Deploy a Simple Web Application on Target Machines Using a CI Pipeline
 
 ## Overview
-This project demonstrates how to build and deploy a Python web application on two target machines using a CI pipeline. The process involves containerizing the application, configuring infrastructure, and automating deployment using Jenkins and Ansible.
+This project demonstrates how to build and deploy a Python web application on two target machines using a CI pipeline. The process involves containerizing the application, configuring infrastructure, and automating deployment using Jenkins and Ansible. Notably, the pipeline underwent 70 iterations of failure before succeeding, showcasing the persistence and iterative improvement required in real-world CI/CD workflows.
 
 ---
 
@@ -170,11 +170,33 @@ pipeline {
 ```
 6. Run the Pipeline
 
+<<<<<<< HEAD
 Trigger the Jenkins pipeline manually or schedule it based on your requirement.
 
 Verify each stage completes successfully by reviewing the Jenkins console output.
 
 Confirm that the application is running on both target machines by accessing the exposed port (e.g., http://<machine_ip>:8080).
+=======
+### 6. Run the Pipeline
+- Trigger the Jenkins pipeline manually or schedule it based on your requirement.
+- Verify each stage completes successfully by reviewing the Jenkins console output.
+- Confirm that the application is running on both target machines by accessing the exposed port (e.g., `http://<machine_ip>:8080`).
+
+---
+
+## Pipeline Iterations
+The pipeline execution journey involved 70 iterations of failure before achieving success. This process emphasized the importance of debugging, incremental improvements, and persistence in CI/CD pipelines.
+
+## Visuals
+### 1. Jenkins Pipeline Overview
+![Jenkins Pipeline Overview](path/to/jenkins_pipeline_overview.png)
+
+### 2. Docker Containers Running
+![Docker Containers Running](path/to/docker_containers_running.png)
+
+### 3. Application Accessible on Target Machines
+![Application Running](path/to/application_running.png)
+
 ---
 
 ## Conclusion
