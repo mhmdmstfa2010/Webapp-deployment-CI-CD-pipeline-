@@ -212,10 +212,8 @@ The pipeline execution journey involved 70 iterations of failure before achievin
 ### 1. Jenkins Pipeline Overview
 ![Jenkins Pipeline Overview](path/to/jenkins_pipeline_overview.png)
 
-### 2. Docker Containers Running
-![Docker Containers Running](path/to/docker_containers_running.png)
 
-### 3. Application Accessible on Target Machines
+### 2. Application Accessible on Target Machines
 ![Application Running](path/to/application_running.png)
 
 ---
