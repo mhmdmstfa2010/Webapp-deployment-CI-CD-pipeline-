@@ -1,6 +1,9 @@
 # Build and Deploy a Simple Web Application on Target Machines Using a CI Pipeline
 
-## Overview
+
+
+![## Overview](https://github.com/mhmdmstfa2010/ODC-final-project/blob/master/imags/diagram-export-12-23-2024-4_10_00-PM.png)
+
 This project demonstrates how to build and deploy a Python web application on two target machines using a CI pipeline. The process involves containerizing the application, configuring infrastructure, and automating deployment using Jenkins and Ansible. Notably, the pipeline underwent 70 iterations of failure before succeeding, showcasing the persistence and iterative improvement required in real-world CI/CD workflows.
 
 ---
